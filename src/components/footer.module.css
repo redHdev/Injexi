@@ -1,0 +1,132 @@
+.footer {
+    background-color: #1d1d1f;
+    color: #fff;
+    padding: 0px 20px 20px 20px;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin: auto;
+  
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    @media (max-width: 768px){
+      padding-left: 0px;
+    }
+  }
+  
+  .aboutSection,
+  .menuSection {
+    width: 100%;
+  
+    @media (min-width: 768px) {
+      width: 45%;
+    }
+  }
+  
+  .aboutSection {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  
+  .socialLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .menuSection ul{
+    font-size: 18px;
+    list-style-type: none;
+    color: #E0E0E0;
+  }
+  
+  .socialLinks {
+    list-style-type: none;
+  }
+  
+  .menuSection ul li,
+  .socialLinks li {
+    margin-bottom: 10px;
+  }
+  
+  .menuSection ul li a{
+    color: #E0E0E0;
+    text-decoration: none;
+  }
+  .socialLinks li a {
+    color: #f64cb7;
+    text-decoration: none;
+  }
+  
+  .menuSection ul li a:hover{
+    color: #f64cb7;
+  }
+
+  .socialLinks li a:hover {
+    color: #c5419d;
+  }
+
+  .menuSection h2 {
+    margin-bottom: 20px;
+  }
+
+  .socialLinks {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px; 
+    align-items: center; 
+    margin-bottom: 30px;
+}
+
+  
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    padding-top: 40px;
+    padding-left:20px;
+    margin: auto;
+  }
+  
+  .footer-bottom a {
+    color: #ffffff;
+  }
+  
+  .footer-bottom a:hover {
+    color: #f64cb7;
+  }
+
+
+/* Media Query for mobile */
+@media only screen and (max-width: 768px) {
+
+  .footer-bottom {
+    padding-left: 0px;
+  }
+
+  .footer-bottom p {
+    font-size: 16px; /* You can set this to whatever size you feel looks best */
+    text-align: center;
+  }
+}
+
+.heartIcon {
+  color: #f64cb7;  /* Change this to any color you like */
+}

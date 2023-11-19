@@ -1,0 +1,39 @@
+# General Rules for All Bots
+User-agent: *
+Disallow: /private/
+Disallow: /_next/
+Disallow: /api/
+Allow: /api/sitemap/
+Disallow: /user/
+Disallow: /authv/
+Disallow: /verify/
+Allow: /public/
+Crawl-delay: 10
+Sitemap: https://injexi.com/api/sitemap/sitemap-index/
+
+# Specific Rules for Selected Bots
+User-agent: adsbot-google
+User-agent: AhrefsBot
+Disallow: /private/
+Disallow: /_next/
+Disallow: /api/
+Allow: /api/sitemap/
+Disallow: /user/
+Disallow: /authv/
+Disallow: /verify/
+Crawl-delay: 10
+Sitemap: https://injexi.com/api/sitemap/sitemap-index/
+
+# Disallow all crawling for the Nutch bot
+User-agent: Nutch
+Disallow: /
+
+# Rules for MJ12bot
+User-agent: MJ12bot
+Crawl-delay: 10
+
+# Rules for Pinterest
+User-agent: Pinterest
+Crawl-delay: 1
+
+# End of File

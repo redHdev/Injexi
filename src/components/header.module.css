@@ -1,0 +1,261 @@
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/fonts/coolvetica-rg-it.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+.headerTopBar {
+  height: 40px;
+  background: #252525;
+}
+
+.innerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 7px 0px;
+  margin: auto;
+}
+
+.rightSide {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rightSide a {
+  text-decoration: none;
+  color: white;
+}
+
+.rightSide a:hover {
+  text-decoration: none;
+  color: #f64cb7;
+}
+
+.link {
+  margin: 0 10px;
+}
+
+.customUnderline {
+  position: relative;
+}
+
+.customUnderline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  background: #f64cb7;
+}
+
+.heartIcon {
+  color: #f64cb7;  /* Change this to any color you like */
+}
+
+.header {
+    width: 100%;
+    background-color: #d76fa3;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px 30px;
+    margin: auto;
+  }
+  
+  .header.homepage {
+    background-color: #252525; /* Use the color you want for the homepage header */
+  }
+  
+  .logo {
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: "Coolvetica", Arial, sans-serif;
+  }
+
+  .logo a {
+    color: white;
+    text-decoration: none;
+  }
+  
+/* Main menu styles */
+.nav > ul {
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+  
+}
+
+.nav > ul > li {
+  display: inline;
+  font-weight: bold;
+  position: relative;  /* For absolute positioning of submenu */
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav ul li a:hover {
+  color: #FCC9F4;
+}
+
+
+/* Hamburger menu styles */
+.nav .hamburger {
+  display: block;  /* Hamburger is always displayed */
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (min-width: 769px){
+.nav .hamburger {
+  display: none;  /* Hamburger is not displayed */
+}
+}
+
+/* Styles for mobile and tablet screens */
+@media (max-width: 768px) {
+  .nav > ul {
+    display: none;
+    flex-direction: column;
+    background-color: #d76fa3;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    padding: 30px;
+    gap: 10px;
+  }
+
+  .nav.open > ul {
+    display: flex;
+    background-color: black;
+  }
+}
+
+/* Styles for desktop screens */
+@media (min-width: 769px) {
+  .nav > ul {
+    display: flex;  /* Menu is always displayed on desktop */
+  }
+}
+
+/* Submenu styles */
+
+.submenu {
+  display: none;
+  position: absolute;
+  width: 300px;
+  top: 100%;
+  left: 0;
+  background-color: #000000;
+  flex-direction: column;
+  z-index: 1;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .submenu {
+    position: fixed;  /* Fixed position */
+    width: calc(100% - 40px);  /* Full width with some padding */
+    top: 130px;  
+    left: 20px;  /* 20px from the left */
+    bottom: 20px;  /* 20px from the bottom */
+  }
+}
+
+@media (min-width: 769px) {
+  .submenu {
+    display: none;
+  position: absolute;
+  width: 300px;
+  top: 30px;
+  left: auto;
+  right: 0;
+  background-color: #000000;
+  flex-direction: column;
+  z-index: 1;
+  border-radius: 5px;
+  padding: 10px;
+  }
+}
+
+
+
+
+.submenu li {
+  display: block;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px dashed rgba(215, 111, 163, 0.8); 
+}
+
+/* Remove border for the last item */
+.submenu li:last-child {
+  border-bottom: none;
+}
+
+.lastmenuitem a{
+  color: #f64cb7!important;
+  text-decoration: underline!important;
+}
+
+/* Show submenu when menu is open */
+.nav.open ul li .submenu {
+  display: flex;
+}
+
+/* For desktop, show submenu on hover */
+@media (min-width: 769px) {
+  .nav ul li:hover .submenu {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav > ul {
+    display: none;  /* Hide the main menu */
+  }
+  .nav.open > .submenu {
+    display: flex;  /* Show only the submenu */
+  }
+
+  .headerTopBar {
+    height: 40px;
+    background: #252525;
+  }
+}
+
+@media (max-width: 350px) {
+  .headerTopBar {
+    font-size: 0.8rem;
+    height: 35px;
+  }
+}
+
+.hideOnMobile {
+  display: inline; /* Default behavior on non-mobile */
+}
+
+@media (max-width: 768px) {
+  .hideOnMobile {
+    display: none!important; /* Hidden on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .hideBlackOnMobile {
+    background-color: transparent!important; /* Hidden on mobile */
+  }
+}

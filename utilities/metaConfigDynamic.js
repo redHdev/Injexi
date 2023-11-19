@@ -1,0 +1,38 @@
+// utilities/metaConfigDynamic.js
+export default function getMetaConfig({
+  robotsContent,
+  title,
+  description,
+  canonicalURL,
+  locale,
+  type,
+  image,
+  imageWidth,
+  imageHeight,
+  imageType,
+  author,
+  publishedTime,
+  modifiedTime,
+  writtenBy,
+  readingTime,
+  businessName,
+  location,
+}) {
+  return {
+    robotsContent: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    title: title || `${businessName} | Reviews & Discount Codes | ${location}`,
+    description: description || `Planning to visit ${businessName} in ${location}? First, explore honest reviews and discount codes exclusively on Injexi! Your pre-visit guide.`,
+    canonicalURL,
+    locale: "en_AU",
+    type: "website",
+    image: image || 'https://Injexi.b-cdn.net/Injexi%20Australia/Website%20Assets/logo512.png',
+    imageWidth,
+    imageHeight,
+    imageType,
+    author,
+    publishedTime,
+    modifiedTime,
+    writtenBy,
+    readingTime,
+  };
+}
